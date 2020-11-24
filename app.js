@@ -6,8 +6,11 @@ const mongoose = require('mongoose')
 const app = express()
 const port = 3000
 
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+
 app.get('/', (req, res) => {
-  res.send('hello')
+  res.render('index')
 })
 
 app.listen(port, () => {
