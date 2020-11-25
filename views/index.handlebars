@@ -1,1 +1,59 @@
-<h2>hello</h2>
+<div class='container'>
+  {{!類別選單}}
+  <div class='row mt-5 justify-content-center'>
+    <div class="dropdown">
+      <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        消費類別
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">家居物業</a>
+        <a class="dropdown-item" href="#">交通出行</a>
+        <a class="dropdown-item" href="#">休閒娛樂</a>
+        <a class="dropdown-item" href="#">餐飲食品</a>
+        <a class="dropdown-item" href="#">其他</a>
+      </div>
+    </div>
+  </div>
+
+  {{!總金額}}
+  <div class='row mt-3 justify-content-center'>
+    <div class='col-6 text-center'>
+      <span style='font-size:40px'>{{category_name}}總支出:</span>
+      <h1 class='d-inline'>{{totalAmount}}</h1>
+    </div>
+  </div>
+</div>
+
+{{!項目}}
+<div class='row mt-2 justify-content-center'>
+  <ul class="list-group list-group-flush col-11 col-md-8">
+    {{!一個條目}}
+    {{#each}}
+    <li class="list-group-item d-flex justify-content-between">
+      <div class='d-flex justify-content-between' style='width: 60%'>
+        <div class='d-flex'>
+          <i class="{{this.icon}}" style="font-size: 30px; color: #a9cccc; line-height: 80px"></i>
+          <div class='d-flex flex-column justify-content-center'>
+            <p class="m-0" style="font-size: 20px;">
+              {{this.name}}
+            </p>
+            <p class="m-0" style="font-size: 15px;">
+              {{this.date}}
+            </p>
+          </div>
+        </div>
+        <p style="line-height: 80px; font-size: 20px">$200</p>
+      </div>
+      <div class='d-flex align-items-center'>
+        <a href="/records/{{this._id}}/edit" class='btn btn-outline-info'>
+          修改
+        </a>
+        <form action="/records/{{this._id}}?_method=DELETE" method="POST" onsubmit="return webConfirm('確定要刪除這項花費嗎?')">
+          <button class='btn btn-outline-warning ml-2'>刪除</button>
+        </form>
+      </div>
+      {{/each}}
+    </li>
+  </ul>
+</div>
