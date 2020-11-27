@@ -17,6 +17,9 @@ const recordSchema = new Schema({
     type: Number,
     required: true,
   },
+  icon: {
+    type: String,
+  },
 })
 
 module.exports = mongoose.model('Record', recordSchema)

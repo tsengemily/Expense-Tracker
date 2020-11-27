@@ -4,31 +4,44 @@
       "name": "摩斯加值",
       "date": "2020-11-26",
       "category": "餐飲食品",
-      "amount": 500
+      "amount": 500,
+      "icon": "fas fa-utensils"
     },
     {
       "name": "7-11",
       "date": "2020-11-25",
       "category": "餐飲食品",
-      "amount": 65
+      "amount": 65,
+      "icon": "fas fa-utensils"
+
     },
     {
       "name": "圓山",
       "date": "2020-11-24",
       "category": "交通出行",
-      "amount": 20
+      "amount": 20,
+      "icon": "fas fa-shuttle-van"
     },
     {
       "name": "青點追思會",
       "date": "2020-11-22",
       "category": "休閒娛樂",
-      "amount": 320
+      "amount": 320,
+      "icon": "fas fa-grin-beam"
     },
     {
       "name": "咖啡濾紙",
       "date": "2020-11-13",
       "category": "居家物業",
-      "amount": 39
+      "amount": 39,
+      "icon": "fas fa-home"
+    },
+    {
+      "name": "卡費",
+      "date": "2020-11-17",
+      "category": "其他",
+      "amount": 2500,
+      "icon": "fas fa-pen"
     }
   ]
 }
