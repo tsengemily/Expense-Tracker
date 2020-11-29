@@ -1,0 +1,39 @@
+<div class="container">
+  <form class="row justify-content-center mt-5" action="/records" method="POST">
+    <p>*必填項目</p>
+    <div class="form-row col-12 mb-4">
+      <h2 style="margin: 0 auto;">請輸入你的支出</h2>
+    </div>
+
+    <div class="form-group my-3 col-10 text-center">
+      <label class="col-5 d-inline mr-5" style="font-size:30px;">名稱*:</label>
+      <input type="text" class="form-control-lg col-6" name="name" required>
+    </div>
+
+    <div class="form-group my-3 col-10 text-center">
+      <label class="col-5 d-inline mr-5" style="font-size:30px;">日期*:</label>
+      <input type="date" class="form-control-lg col-6" name="date" required>
+    </div>
+
+    <div class="form-group my-3 col-10 text-center">
+      <label class="col-5 d-inline mr-5" style="font-size:30px;">類別*:</label>
+      <select class="custom-select-lg col-6" name="category" required>
+        <option selected>Choose...</option>
+        <option value="居家物業">居家物業</option>
+        <option value="交通出行">交通出行</option>
+        <option value="休閒娛樂">休閒娛樂</option>
+        <option value="餐飲食品">餐飲食品</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+
+    <div class="form-group my-3 col-10 text-center">
+      <label class="col-5 d-inline mr-5" style="font-size:30px;">金額*:</label>
+      <input type="number" class="form-control-lg col-6" name="amount" required>
+    </div>
+
+    <div class="form-group my-3 col-10 text-center">
+      <button type="submit" class="btn btn-outline-dark mt-4 btn-lg">新增支出</button>
+    </div>
+  </form>
+</div>
