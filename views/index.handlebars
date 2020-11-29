@@ -49,8 +49,9 @@
         <a href="/records/{{this._id}}/edit" class='btn btn-outline-info'>
           修改
         </a>
-        <form action="/records/{{this._id}}?_method=DELETE" method="POST" onsubmit="return webConfirm('確定要刪除這項花費嗎?')">
-          <button class='btn btn-outline-warning ml-2'>刪除</button>
+        <form action="/records/{{this._id}}/delete" method="POST">
+          <button class='btn btn-outline-warning ml-2' type="submit"
+            onclick="if(confirm('您確定要刪除嗎?')) return true; else return false">刪除</button>
         </form>
       </div>
     </li>
