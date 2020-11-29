@@ -7,7 +7,20 @@ const routes = require('./routes')
 const app = express()
 const port = 3000
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine(
+  'handlebars',
+  exphbs({
+    defaultLayout: 'main',
+    helpers: {
+      ifEqual(category, targetCategory, options) {
+        if (category === targetCategory) {
+          return options.fn(this)
+        }
+        return options.inverse(this)
+      },
+    },
+  })
+)
 app.set('view engine', 'handlebars')
 
 app.use(bodyParser.urlencoded({ extended: true }))
