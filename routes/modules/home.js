@@ -3,6 +3,7 @@ const router = express.Router()
 const Record = require('../../models/record')
 const totalAmount = require('../../public/javascripts/totalAmount')
 
+//首頁
 router.get('/', (req, res) => {
   Record.find()
     .lean()
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
     .catch((error) => console.log(error))
 })
 
+//僅依類別顯示
 router.get('/filter/:category', (req, res) => {
   const category = req.params.category
 
