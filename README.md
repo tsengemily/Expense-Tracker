@@ -44,19 +44,12 @@ git clone https://github.com/tsengemily/Expense-Tracker.git
 cd Expense-Tracker
 ```
 
-3. 安裝 npm
+3. 安裝
 
 ```
-npm init -y
+npm install
 ```
 
-4. 安裝所需插件
-
-```
-npm i
-```
-
-5. 啟動專案
 6. 載入種子資料
 
 ```
