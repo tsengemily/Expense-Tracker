@@ -50,19 +50,19 @@ cd Expense-Tracker
 npm install
 ```
 
-6. 載入種子資料
+4. 載入種子資料
 
 ```
 npm run seed
 ```
 
-7. 連線伺服器
+5. 連線伺服器
 
 ```
 npm run dev
 ```
 
-8.將回傳的網址貼入瀏覽器執行
+6. 將回傳的網址貼入瀏覽器執行
 
 ```
 The server is listening on http://localhost:3000
